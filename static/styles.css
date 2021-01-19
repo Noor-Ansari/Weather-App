@@ -1,0 +1,93 @@
+body{
+    background: linear-gradient(to right, #660066 0%, #ff99cc 100%);
+    padding: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.main{
+    padding: 20px;
+    height: 60vh;
+    width: 30vw;
+    margin-top: 100px;
+    background: linear-gradient(to bottom, #ffffcc 0%, #ff5050 80%);
+    border-radius: 20px;
+    -webkit-transition-duration: 0.4s; 
+    transition-duration: 0.4s; 
+}
+
+.main input{
+    height: 10%;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    width: 50%;
+    padding: 20px;
+    -webkit-transition-duration: 0.3s; 
+    transition-duration: 0.3s;
+}
+
+.main input:focus {
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2),0 10px 20px 0 rgba(0,0,0,0.15);
+  }
+
+.main button{
+    background: linear-gradient(to bottom, #6600cc 0%, #6666ff 100%);
+    border: none;
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.2s; 
+    transition-duration: 0.2s;   
+}
+
+.main button:hover {
+    box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2),0 10px 20px 0 rgba(0,0,0,0.15);
+  }
+
+.message{
+    color: red;
+}
+
+.description{
+    margin: 0;
+    padding: 0;
+}
+
+.description  h2{
+    display: inline;
+    margin: 2px;
+}
+
+#city, #temp{
+    font-family: 'Karla', sans-serif;
+    font-weight: 700;
+    color: #2B394A;
+}
+
+#desc, #day{
+    font-weight: 500;
+    font-family: 'Martel', serif;
+    color: #2B394A;
+}
+
+@media only screen and (max-width: 768px) {
+    .main{
+        padding: 10px;
+        height: 350px;
+        width: 300px;
+        margin-top: 90px;
+    }
+    .main input{
+        height: 5%;
+        border: none;
+        font-size: 20px;
+        width: 60%;
+        padding: 10px;
+    }
+}

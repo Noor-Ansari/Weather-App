@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What's the weather?</title>
+    <link rel="shortcut icon" href="static/favicon.png"/>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <center>
+    <div class="container">
+        <main class="main">
+          <form action="/get_weather" method="POST">
+            {% if weather.entered_city %}
+              <input
+                type="text"
+                ,
+                name="search"
+                placeholder="Enter city name...."
+                value="{{weather.entered_city}}"
+              />
+            {% else %}
+              <input
+              type="text"
+              ,
+              name="search"
+              placeholder="Enter city name...."
+              />
+            {% endif %}
+            <br>
+            {% with messages = get_flashed_messages() %} 
+            {% if messages %} 
+            {% for message in messages %}
+            <small class="message">{{ message }}</small>
+            {% endfor %} 
+            {% endif %} 
+            {% endwith %} 
+            <hr>
+            <button type="submit" name="submit">Search</button>
+            <h2 id="temp">{{ weather.temp }} Celcius  <span id="day">({{ weather.day }})</span></h2> 
+            <h2 id="city">{{ weather.city }}, ({{ weather.country }})</h2>
+            <h2 id="desc">{{ weather.description }}</h2>
+            <img src="http://openweathermap.org/img/w/{{ weather.icon }}.png""
+            alt="Icon"/>
+            </div>
+          </form>
+        </main>
+    </div>
+  </center>
+  </body>
+</html>
