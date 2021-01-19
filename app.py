@@ -49,4 +49,4 @@ def get_weather():
         return redirect("/")
 
 if __name__ == "__main__":
-    waitress.serve(app)
+    app.run()
